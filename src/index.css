@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-medium px-4 py-2 rounded-lg transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium px-4 py-2 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 transition-all duration-200 hover:shadow-md;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-40;
+  }
+
+  .modal-content {
+    @apply fixed inset-y-0 right-0 w-full max-w-4xl bg-white shadow-2xl z-50 overflow-y-auto;
+  }
+
+  .tier-badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .tier-standard {
+    @apply bg-tier-standard/10 text-tier-standard;
+  }
+
+  .tier-lean {
+    @apply bg-tier-lean/10 text-tier-lean;
+  }
+
+  .tier-custom {
+    @apply bg-tier-custom/10 text-tier-custom;
+  }
+}
